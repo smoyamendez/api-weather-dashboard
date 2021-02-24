@@ -43,3 +43,9 @@ body {
 #sidebar {
     background-color: var(--bs-gray);
 }
+
+#meow {
+    background-color: yellow;
+    border-style: solid;
+    border-color: black;
+}
