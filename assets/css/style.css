@@ -45,7 +45,7 @@ body {
 }
 
 #meow {
-    background-color: yellow;
+    background-color: var(--bs-blue);
     border-style: solid;
     border-color: black;
 }
