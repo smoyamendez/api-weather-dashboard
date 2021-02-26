@@ -25,8 +25,6 @@ var dayTwoHum = document.querySelector("#dayTwoHum");
 var dayThreeHum = document.querySelector("#dayThreeHum");
 var dayFourHum = document.querySelector("#dayFourHum");
 var dayFiveHum = document.querySelector("#dayFiveHum");
-
-
 var iconEl = document.querySelector("#icon");
 var unit = 'imperial'
 
@@ -76,10 +74,6 @@ function getFiveDay() {
         })
 }
 
-
-
-
-
 // Function for grabbing Current Weather
 
 function getCurrent() {
@@ -102,12 +96,31 @@ function getCurrent() {
         })
 }
 
+var searchedCities = [];
+
+
+// pushes searched cities to local storage
+function lsCities() {
+    localStorage.setItem('searchedCities', JSON.stringify(searchedCities));
+}
+// pull searched cities from local storage
+function getCities() {
+    var storedCities = JSON.parse(localStorage.getItem('searchedCities'));
+    if (storedCities) {
+        searchedCities = storedCities;
+    }
+}
+
+
+
 // When Submit Button is clicked
 
 cityBtn.addEventListener('click', function (event) {
     event.preventDefault();
     getCurrent();
     getFiveDay();
+    lsCities();
+    getCities();
 })
 
 

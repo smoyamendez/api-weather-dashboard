@@ -44,8 +44,6 @@ body {
     background-color: var(--bs-gray);
 }
 
-#meow {
-    background-color: var(--bs-blue);
-    border-style: solid;
-    border-color: black;
+h3 {
+    text-decoration: underline;
 }
